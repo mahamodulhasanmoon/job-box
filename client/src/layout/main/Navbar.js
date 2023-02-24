@@ -34,6 +34,32 @@ const Navbar = () => {
           </Link>
         </li>
 
+
+
+{ email  && role &&(
+  <li>
+  <Link
+    className='border border-black px-2 py-1 rounded-full hover:border-primary hover:text-white hover:bg-primary hover:px-4 transition-all '
+    to='/dashboard'
+  >
+    Dashboard
+  </Link>
+</li>
+)
+
+}
+{ email  && !role &&(
+  <li>
+  <Link
+    className='border border-black px-2 py-1 rounded-full hover:border-primary hover:text-white hover:bg-primary hover:px-4 transition-all '
+    to='/register'
+  >
+    Get Started
+  </Link>
+</li>
+)
+
+}
 { !email ?
           <li>
           <Link
@@ -55,20 +81,6 @@ const Navbar = () => {
         </button>
       </li>
     
-}
-
-{ email  && role &&(
-  <li>
-  <Link
-    className='border border-black px-2 py-1 rounded-full hover:border-primary hover:text-white hover:bg-primary hover:px-4 transition-all '
-    to='/dashboard'
-  >
-    Dashboard
-  </Link>
-</li>
-)
-          
-
 }
       </ul>
     </nav>
